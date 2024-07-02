@@ -1,35 +1,29 @@
 const defaultSEOConfig = {
-  title: "Anish De | Fullstack Developer",
+  title: "Wardah Ijaz | Software Engineer",
   description:
-    "10th grader • Fullstack Web Developer • Web3 Enthusiast • Blogger • Tech Enthusiast",
-  cannonical: "https://anishde.dev/",
+    "Associate Software Engineer @ Huawei • Teaching/Research Assistant @UofT • CV/ML Enthusiast • Android Developer ",
+  cannonical: "https://wardah_ijaz.dev/",
   openGraph: {
     type: "website",
-    url: "https://anishde.dev/",
-    site_name: "Anish De",
-    title: "Anish De | Fullstack Developer",
-    description:
-      "10th grader • Fullstack Web Developer • Web3 Enthusiast • Blogger • Tech Enthusiast",
+    url: "https://wardah_ijaz.dev/",
+    site_name: "Wardah Ijaz",
+    title: "Wardah Ijaz | Software Engineer",
+    description: "Experienced Software Engineer specializing in web development and machine learning. Passionate about creating impactful solutions and contributing to open-source projects.",
     images: [
       {
-        url: "https://res.cloudinary.com/anishde12020/image/upload/v1654360780/Blogfolio/og.png",
+        url: "",
         width: 1200,
         height: 630,
-        alt: "Anish De's Portfolio Site's Opengraph Image",
+        alt: "Wardah Ijaz's Portfolio Site's Opengraph Image",
       },
     ],
     profile: {
-      firstName: "Anish",
-      lastName: "De",
-      username: "AnishDe12020",
-      gender: "male",
+      firstName: "Wardah",
+      lastName: "Ijaz",
+      username: "iWardah",
+      gender: "female",
     },
-  },
-  twitter: {
-    handle: "@AnishDe12020",
-    site: "@AnishDe12020",
-    cardType: "summary_large_image",
-  },
+  }
 };
 
 export default defaultSEOConfig;

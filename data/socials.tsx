@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
 import {
-  DevToLogo,
   GitHubLogo,
-  HashnodeLogo,
-  Twitterlogo,
-  YouTubeLogo,
+  MediumLogo,
+  GmailLogo,
+  LinkedInLogo,
 } from "@/components/Shared/Icons";
 
 interface Social {
@@ -17,35 +16,29 @@ interface Social {
 
 const socials: Social[] = [
   {
-    id: "twitter",
-    name: "Twitter",
-    url: "https://twitter.com/AnishDe12020",
-    icon: <Twitterlogo color="#1DA1F2" />,
-  },
-  {
     id: "github",
     name: "GitHub",
-    url: "https://github.com/AnishDe12020",
+    url: "https://github.com/iWardah",
     icon: <GitHubLogo />,
   },
   {
-    id: "youtube",
-    name: "YouTube",
-    url: "https://www.youtube.com/anishtechtutorials",
-    icon: <YouTubeLogo color="#ff0000" />,
-  },
-  {
-    id: "hashnode",
-    name: "Hashnode",
+    id: "medium",
+    name: "Medium",
     url: "https://hashnode.com/@anishde12020",
-    icon: <HashnodeLogo color="#2962ff" />,
+    icon: <MediumLogo color="#2962ff" />,
   },
   {
-    id: "dev.to",
-    name: "Dev.to",
-    url: "https://dev.to/anishde12020",
-    icon: <DevToLogo color="#f0f0f0" />,
+    id: "gmail",
+    name: "Contact",
+    url: "mailto:ijazwardah8@gmail.com",
+    icon: <GmailLogo color="#f0f0f0" />,
   },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/wardah-i-0b6131221/",
+    icon: <LinkedInLogo color="#f0f0f0" />,
+  }
 ];
 
 export default socials;

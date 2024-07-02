@@ -23,6 +23,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blogPost }) => {
 
       <div className="overflow-hidden rounded-xl">
         <NextImage
+          alt="y"
           width={blogPost.image.width}
           height={blogPost.image.height}
           src={blogPost.image.url}
@@ -34,6 +35,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blogPost }) => {
         <div className="mt-1 flex items-center space-x-2">
           <div className="mr-1 mt-1">
             <NextImage
+              alt="y"
               src={AvatarJPG}
               placeholder="blur"
               height={32}

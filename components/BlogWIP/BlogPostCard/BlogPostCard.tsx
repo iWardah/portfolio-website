@@ -32,6 +32,7 @@ const ProjectCard = ({
       </div>
       <Link href={`/blog/${slug}`} className="aspect-[16/9]">
         <NextImage
+          alt="yay"
           src={image.url}
           height={image.height}
           width={image.width}

@@ -7,7 +7,8 @@ import {
   ReactNode,
 } from "react";
 import { ArrowUpRight } from "react-feather";
-import NextLink from "next/link";
+import NextLink,{LinkProps} from "next/link";
+
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -44,61 +45,59 @@ const ExternalLink = forwardRef<HTMLAnchorElement, ExternalLinkProps>(
       ? true
       : false;
 
-    return (
-      <>
-        {isInternalLink ? (
-          <NextLink href={href}>
-            <a
-              className={cx(
-                "transition duration-200",
-                isGradientUnderline && "gradient-underline flex items-center",
-                className
-              )}
-              ref={ref}
-              {...otherProps}
-            >
-              {isGradientUnderline ? <span>{children ?? href}</span> : children}
-            </a>
-          </NextLink>
-        ) : (
+    return <>
+      {isInternalLink ? (
+        <NextLink href={href} legacyBehavior>
           <a
-            href={href}
             className={cx(
-              "mr-1 inline-flex items-center space-x-1 text-gray-300 transition duration-200",
-              isGradientUnderline && "gradient-underline no-underline",
-              isGradientUnderline &&
-                !noHighlight &&
-                "text-blue-400 hover:text-blue-300",
+              "transition duration-200",
+              isGradientUnderline && "gradient-underline flex items-center",
               className
             )}
-            target="_blank"
-            rel="noopener noreferrer"
             ref={ref}
             {...otherProps}
           >
-            {icon &&
-              cloneElement(icon as ReactElement, { className: "h-4 w-4 mr-1" })}
-            {noExternalLinkIcon ? children : <span>{children}</span>}{" "}
-            {!noExternalLinkIcon && <ArrowUpRight className="h-4 w-4" />}
+            {isGradientUnderline ? <span>{children ?? href}</span> : children}
           </a>
-        )}
-        <style jsx>{`
-          .gradient-underline :not(.anchor) {
-            text-decoration: none;
-            background-image: linear-gradient(to right, #be185d, #1d4ed8);
-            background-repeat: no-repeat;
-            background-position: bottom left;
-            background-size: 0% 2px;
-            transition: background-size 150ms ease-in-out;
-          }
+        </NextLink>
+      ) : (
+        <a
+          href={href}
+          className={cx(
+            "mr-1 inline-flex items-center space-x-1 text-gray-300 transition duration-200",
+            isGradientUnderline && "gradient-underline no-underline",
+            isGradientUnderline &&
+              !noHighlight &&
+              "text-blue-400 hover:text-blue-300",
+            className
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          ref={ref}
+          {...otherProps}
+        >
+          {icon &&
+            cloneElement(icon as ReactElement, { className: "h-4 w-4 mr-1" })}
+          {noExternalLinkIcon ? children : <span>{children}</span>}{" "}
+          {!noExternalLinkIcon && <ArrowUpRight className="h-4 w-4" />}
+        </a>
+      )}
+      <style jsx>{`
+        .gradient-underline :not(.anchor) {
+          text-decoration: none;
+          background-image: linear-gradient(to right, #be185d, #1d4ed8);
+          background-repeat: no-repeat;
+          background-position: bottom left;
+          background-size: 0% 2px;
+          transition: background-size 150ms ease-in-out;
+        }
 
-          .gradient-underline:hover :not(.anchor) {
-            background-size: 100% 2px;
-            color: inherit;
-          }
-        `}</style>
-      </>
-    );
+        .gradient-underline:hover :not(.anchor) {
+          background-size: 100% 2px;
+          color: inherit;
+        }
+      `}</style>
+    </>;
   }
 );
 

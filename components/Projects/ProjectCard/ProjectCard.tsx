@@ -41,7 +41,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
                 src={image.url}
                 alt={name}
                 className="rounded-xl"
-                layout="fill"
                 placeholder="blur"
                 blurDataURL={placeholderImage}
               />

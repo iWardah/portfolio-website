@@ -1,5 +1,6 @@
 const { withContentlayer } = require("next-contentlayer");
 
+
 module.exports = withContentlayer({
   images: {
     domains: [
@@ -12,4 +13,4 @@ module.exports = withContentlayer({
     path: "",
   },
   trailingSlash: true,
-});
+}) ;

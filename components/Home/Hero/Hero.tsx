@@ -1,5 +1,5 @@
 import Socials from "@/components/Shared/Socials";
-import Image from "next/image";
+import NextImage from "next/image";
 import AvatarJPG from "public/static/images/avatar.jpg";
 
 const Hero = (): JSX.Element => {
@@ -14,16 +14,17 @@ const Hero = (): JSX.Element => {
           • Android Developer 
         </h2>
         <p className="text-md will-change-opacity text-lg text-gray-300 will-change-transform">
-          I am a software engineer, currently looking into learning new areas (GoLang, Cloud Computing, Model Deployment). I'm excited to share my learning journey through regular blog posts.
+          I am in my Final Year of Computer Sciences studies at <span style={{ color: '#8dade0' }}> University of Toronto </span>. Currently, I am looking into learning new areas (GoLang, Cloud Computing, Model Deployment).  I'm eager to expand my knowledge and skills in these areas, leveraging my academic background and practical experience. Let's connect—I'm always enthusiastic about networking and discussing innovative ideas in tech!
         </p>
         <Socials className="!mt-12" />
       </div>
       <div className="will-change-opacity relative h-32 w-32 overflow-hidden rounded-full will-change-transform">
-      <Image
+      <NextImage
         src={AvatarJPG}
         alt="Wardah Ijaz"
-        width={200}
-        height={200}
+        width={300}
+        height={300}
+        unoptimized={true}
       />
       </div>
     </div>

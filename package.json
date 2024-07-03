@@ -1,7 +1,7 @@
 {
   "name": "portfolio-starter",
   "version": "0.0.1",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "dev": "contentlayer dev & next dev",

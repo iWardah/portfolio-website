@@ -8,6 +8,7 @@ module.exports = withContentlayer({
       "c5eq9h7e.directus.app",
       "res.cloudinary.com",
       "cdn.hashnode.com",
+      "localhost"
     ],
     loader: "akamai",
     path: "",

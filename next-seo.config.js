@@ -1,5 +1,5 @@
 const defaultSEOConfig = {
-  title: "Wardah Ijaz | Software Engineer",
+  title: "Wardah",
   description:
     "Associate Software Engineer @ Huawei • Teaching/Research Assistant @UofT • CV/ML Enthusiast • Android Developer ",
   cannonical: "https://wardah_ijaz.dev/",

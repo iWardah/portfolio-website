@@ -7,7 +7,7 @@ import {
   ReactNode,
 } from "react";
 import { ArrowUpRight } from "react-feather";
-import NextLink,{LinkProps} from "next/link";
+import NextLink from "next/link";
 
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {

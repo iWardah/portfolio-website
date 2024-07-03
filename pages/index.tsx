@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 
 import Hero from "@/components/Home/Hero";
 import Projects from "@/components/Home/Projects";
+import Experience from "@/components/Home/Experience";
 import BlogPosts from "@/components/Home/BlogPosts";
 
 import hashnodeData from "@/data/hashnode.json";
@@ -17,6 +18,7 @@ const HomePage: NextPage<HomePageProps> = ({ blogPosts }) => {
   return (
     <>
       <Hero />
+      <Experience/>
       <Projects />
       <BlogPosts posts={blogPosts} domain={hashnodeData.domain} />
       <Contact />

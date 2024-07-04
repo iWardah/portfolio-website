@@ -24,7 +24,7 @@ const socials: Social[] = [
   {
     id: "medium",
     name: "Medium",
-    url: "https://hashnode.com/@anishde12020",
+    url: "https://medium.com/@ijazwardah8",
     icon: <MediumLogo color="#2962ff" />,
   },
   {

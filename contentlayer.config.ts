@@ -48,6 +48,34 @@ export const Proof = defineNestedType(() => ({
   },
 }));
 
+export const Experience = defineDocumentType(() => ({
+  name: "Experience",
+  filePathPattern: "experiences/**/*.mdx",
+  contentType: "mdx",
+  fields:{
+    company: {
+      type: "string",
+      description: "The name of the company",
+      required: true,
+    },
+    title: {
+      type: "string",
+      description: "The name of the position",
+      required: true,
+    },
+    description: {
+      type: "string",
+      description: "The description of the role",
+      required: true,
+    },
+    duration: {
+      type: "string",
+      description: "The time spent",
+      required: true,
+    },
+  }
+}))
+
 export const Project = defineDocumentType(() => ({
   name: "Project",
   filePathPattern: "projects/**/*.mdx",
@@ -168,7 +196,7 @@ export const Achievement = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Project, BlogPost, Achievement],
+  documentTypes: [Experience, Project, BlogPost, Achievement],
   mdx: {
     rehypePlugins: [
       rehypeSlug,

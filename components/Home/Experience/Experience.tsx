@@ -1,42 +1,10 @@
 import Link from "@/components/Shared/Link";
 import { ArrowRight } from "react-feather";
+import { allExperiences } from ".contentlayer/generated";
 
 const Experience = () => {
-  const experiences = [
-    {
-      company: "Huawei Technologies",
-      title: "Associate Software Engineer",
-      description: "Department: Human Machine Interaction Lab",
-      duration: "May 2024 - Present",
-    },
-    {
-      company: "University of Toronto",
-      title: "Teaching Assistant",
-      description: "Courses: Theory of Computation and Data Structures & Algorithms",
-      duration: "Sept 2023 - May 2024",
-    },
-    {
-      company: "University of Toronto",
-      title: "Research Assistant",
-      description: "Topic: Impact of storytelling visualization of DSA",
-      duration: "May 2023 - Sept 2023",
-    },
-    {
-      company: "Qatar National Bank",
-      title: "Software Engineer Intern",
-      description: "Implemented DevOps practices to enhance software development lifecycle efficiency.",
-      duration: "June 2023 - Sept 2023",
-    },
-    {
-      company: "Teraception (startup)",
-      title: "Web Development Intern",
-      description: "Developed RestAPIs and contributed to backend systems.",
-      duration: "May 2022 - Sept 2022",
-    }
-  ];
-
-  const firstThreeExperiences = experiences.slice(0, 3);
-  const remainingExperiences = experiences.slice(3);
+  const customOrder = [0, 2, 3]; // Example indices
+  const firstThreeExperiences = customOrder.map(index => allExperiences[index])
 
   return (
     <div className="my-16 flex flex-col">
@@ -58,7 +26,7 @@ const Experience = () => {
           ))}
           {/* "View All Experience" link */}
           <Link
-            href="/Experiences"
+            href="/experiences"
             className="group mt-8 flex items-center justify-start space-x-2 text-xl font-medium" >
             <span>View All Experiences</span>
             <ArrowRight className="h-4 w-4 transition duration-200 group-hover:translate-x-1" />

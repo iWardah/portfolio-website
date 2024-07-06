@@ -19,11 +19,9 @@ const SkillPage: NextPage<ExperiencePageProps> = ({
           <div className="mt-8 flex space-x-8">
             <div className="flex flex-col space-y-2">
               <h1 className="text-2xl font-bold">{experience.title}</h1>
-              <p className="text-sm text-gray-300">{experience.description}</p>
+              <p className="text-sm text-gray-300">Duration: {experience.duration}</p>
             </div>
           </div>
-    
-    
           <article>
             <div className="prose my-12 max-w-full leading-8">
               <ExperienceMDX components={{ ...MDXComponents }} />

@@ -16,12 +16,14 @@ const Experience = () => {
               key={index}
               className="border-l-2 border-gray-300 pl-4 transition duration-200 hover:border-accent transform hover:scale-[1.01]"
             >
-              <div className="mb-2">
-                <h3 className="text-xl font-bold">{experience.title}</h3>
-                <p className="text-sm text-gray-400">{experience.company}</p>
-              </div>
-              <p className="text-md text-gray-500">{experience.description}</p>
-              <p className="text-sm text-gray-400">{experience.duration}</p>
+              <Link href={`/experiences/${experience.slug}`}>
+                  <div className="mb-2">
+                    <h3 className="text-xl font-bold">{experience.title}</h3>
+                    <p className="text-sm text-gray-400">{experience.company}</p>
+                  </div>
+                  <p className="text-md text-gray-500">{experience.description}</p>
+                  <p className="text-sm text-gray-400">{experience.duration}</p>
+              </Link>
             </div>
           ))}
           {/* "View All Experience" link */}

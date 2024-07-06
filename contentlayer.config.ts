@@ -73,6 +73,12 @@ export const Experience = defineDocumentType(() => ({
       description: "The time spent",
       required: true,
     },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: doc => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    }
   }
 }))
 

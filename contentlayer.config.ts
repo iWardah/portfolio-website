@@ -126,52 +126,6 @@ export const Project = defineDocumentType(() => ({
   },
 }));
 
-export const BlogPost = defineDocumentType(() => ({
-  name: "BlogPost",
-  filePathPattern: "blog/**/*.mdx",
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      description: "The title of the blog post",
-      required: true,
-    },
-    date: {
-      type: "string",
-      description: "The date of the blog post",
-      required: true,
-    },
-    cannonicalURL: {
-      type: "string",
-      description: "The link to the blog post",
-      required: false,
-    },
-    image: {
-      type: "nested",
-      description: "Image for the blog post",
-      of: CloudinaryImage,
-    },
-  },
-  computedFields: {
-    slug: {
-      type: "string",
-      resolve: doc => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
-    },
-    dateUpdated: {
-      type: "string",
-      resolve: () => new Date().toDateString(),
-    },
-    readingTime: {
-      type: "json",
-      resolve: doc => readingTime(doc.body.raw),
-    },
-    wordCount: {
-      type: "number",
-      resolve: doc => doc.body.raw.split(/\s+/gu).length,
-    },
-  },
-}));
-
 export const Achievement = defineDocumentType(() => ({
   name: "Achievement",
   filePathPattern: "achievements/**/*.mdx",
@@ -202,7 +156,7 @@ export const Achievement = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Experience, Project, BlogPost, Achievement],
+  documentTypes: [Experience, Project, Achievement],
   mdx: {
     rehypePlugins: [
       rehypeSlug,

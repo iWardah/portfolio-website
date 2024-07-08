@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 
 import Hero from "@/components/Home/Hero";
 import Projects from "@/components/Home/Projects";

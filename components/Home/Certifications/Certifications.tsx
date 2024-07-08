@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from '@heroicons/react/outline'; // Assuming you're using Heroicons for icons
+import { ExternalLinkIcon } from "@heroicons/react/outline"; // Assuming you're using Heroicons for icons
 import Link from "@/components/Shared/Link";
 
 const Certifications = (): JSX.Element => {

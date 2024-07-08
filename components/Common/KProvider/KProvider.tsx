@@ -9,7 +9,6 @@ import {
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import {
-  Book,
   Briefcase,
   Code,
   Home,

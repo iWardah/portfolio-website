@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import {FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitSquare} from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitSquare } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { TbBrandTypescript } from "react-icons/tb";
-import { SiTensorflow, SiPytorch} from "react-icons/si";
+import { SiTensorflow, SiPytorch } from "react-icons/si";
 import Tooltip from "components/Shared/Tooltip/Tooltip";
 
 interface SkillsProps {
@@ -18,26 +18,26 @@ const CIcon = () => (
 
 
 const Skills = ({ small }: SkillsProps): JSX.Element => {
-  const [hoveredIcon, setHoveredIcon] = useState(null);
+  const [setHoveredIcon] = useState(null);
 
   // Array of tech icons you want to display
   const techIcons = [
-    { icon: <FaPython size={25}/>, name: 'Python' },
-    { icon: <FaJava size={25}/>, name: 'Java'},
-    { icon: <CIcon />, name: 'C' },
-    { icon: <FaHtml5 size={25} />, name: 'HTML'},
-    { icon: <FaCss3Alt size={25} />, name: 'CSS'},
-    { icon: <IoLogoJavascript size={25} />, name: 'JavaScript'},
-    { icon: <TbBrandTypescript size={25} />, name: 'TypeScript'}
+    { icon: <FaPython size={25}/>, name: "Python" },
+    { icon: <FaJava size={25}/>, name: "Java" },
+    { icon: <CIcon />, name: "C" },
+    { icon: <FaHtml5 size={25} />, name: "HTML" },
+    { icon: <FaCss3Alt size={25} />, name: "CSS" },
+    { icon: <IoLogoJavascript size={25} />, name: "JavaScript" },
+    { icon: <TbBrandTypescript size={25} />, name: "TypeScript" }
   ];
 
   // Array of tech icons you want to display
   const frameWorks = [
-    { icon: <FaReact size={25}/>, name: 'React' },
-    { icon: <FaNodeJs size={25}/>, name: 'Node.JS' },
-    { icon: <FaGitSquare size={25}/>, name: 'Git' },
-    { icon: <SiTensorflow size={25}/>, name: 'TensorFlow' },
-    { icon: <SiPytorch size={25}/>, name: 'PyTorch' }
+    { icon: <FaReact size={25}/>, name: "React" },
+    { icon: <FaNodeJs size={25}/>, name: "Node.JS" },
+    { icon: <FaGitSquare size={25}/>, name: "Git" },
+    { icon: <SiTensorflow size={25}/>, name: "TensorFlow" },
+    { icon: <SiPytorch size={25}/>, name: "PyTorch" }
   ];
 
   const handleMouseEnter = (name) => {

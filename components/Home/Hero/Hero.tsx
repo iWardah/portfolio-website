@@ -14,7 +14,7 @@ const Hero = (): JSX.Element => {
           • Android Developer 
         </h2>
         <p className="text-md will-change-opacity text-lg text-gray-300 will-change-transform">
-          I am in my Final Year of Computer Sciences studies at <span style={{ color: '#8dade0' }}> University of Toronto </span>. Currently, I am looking into learning new areas (GoLang, Cloud Computing, Model Deployment). Let's connect—I'm always enthusiastic about networking and discussing innovative ideas in tech!
+          I am in my Final Year of Computer Sciences studies at <span style={{ color: "#8dade0" }}> University of Toronto </span>. Currently, I am looking into learning new areas (GoLang, Cloud Computing, Model Deployment). Let&aposs connect—I&aposm always enthusiastic about networking and discussing innovative ideas in tech!
         </p>
         <Socials className="!mt-12" />
       </div>

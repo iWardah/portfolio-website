@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { allExperiences, Experience } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/Common/MDXComponents";
-import { NextSeo } from "next-seo";
 
 interface ExperiencePageProps {
     experience: Experience;

@@ -40,6 +40,8 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
               <NextImage
                 src={image.url}
                 alt={name}
+                width={500}
+                height={500}
                 className="rounded-xl"
                 placeholder="blur"
                 blurDataURL={placeholderImage}

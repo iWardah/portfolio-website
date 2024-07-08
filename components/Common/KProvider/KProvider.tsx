@@ -23,7 +23,6 @@ import toast from "react-hot-toast";
 import Kbd from "@/components/Shared/Kbd";
 import socials from "@/data/socials";
 import { allProjects } from "contentlayer/generated";
-import hashnodeData from "@/data/hashnode.json";
 
 import useCircles from "store/circles";
 
@@ -47,15 +46,6 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
       perform: () => push("/"),
       section: "Pages",
       icon: <Home />,
-    },
-    {
-      id: "guestbook",
-      name: "Guestbook",
-      keywords: "guestbook comments community wall",
-      shortcut: ["g"],
-      perform: () => push("/guestbook"),
-      section: "Pages",
-      icon: <Book />,
     },
     {
       id: "achievements-page",
@@ -123,7 +113,7 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
     id: "source-code",
     name: "Source Code",
     keywords: "source code",
-    perform: () => window.open("https://github.com/AnishDe12020/portfolio"),
+    perform: () => window.open("https://github.com/iWardah/portfolio-website"),
     section: "Socials",
     icon: <Code />,
   });
@@ -135,16 +125,6 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
       perform: () => push("/projects/" + project.slug),
       icon: <IconFactory name={project.iconName} />,
       parent: "projects",
-    });
-  });
-
-  hashnodeData.posts.map(post => {
-    actions.push({
-      id: post._id,
-      name: post.title,
-      perform: () => window.open(`https://${hashnodeData.domain}/${post.slug}`),
-
-      parent: "blog",
     });
   });
 

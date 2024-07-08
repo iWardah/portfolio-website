@@ -1,7 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-
 import ProjectCard from "@/components/Projects/ProjectCard";
-
 import { allProjects, Project } from "contentlayer/generated";
 import Link from "@/components/Shared/Link";
 import { ArrowRight } from "react-feather";
@@ -22,8 +20,8 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
   return (
     <>
       <NextSeo
-        title="Projects | Anish De"
-        description="Projects worked upon by Anish De"
+        title="Projects | Wardah"
+        description="Projects worked upon by Wardah"
       />
       <h1 className="mb-8 text-2xl font-bold">Projects</h1>
       <div className="flex-col space-y-8">
@@ -35,13 +33,13 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
             link={project.link}
             githubLink={project.githubLink}
             slug={project.slug}
-            image={project.image}
+            image={project.image }
             placeholderImage={project.placeholderImage}
           />
         ))}
       </div>
       <Link
-        href="https://github.com/stars/AnishDe12020/lists/projects"
+        href="https://github.com/iWardah"
         className="group mt-8 flex flex-row items-center justify-start space-x-2 text-xl font-medium"
         noExternalLinkIcon
       >
@@ -56,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const allProjectsWithPlaceholderImages = [];
 
   for (const project of allProjects) {
-    const previewUrl = await getPreviewImageUrl(project.image.url);
+    const previewUrl = await getPreviewImageUrl(project.image.url); // Ensure project.image.url is defined correctly
 
     allProjectsWithPlaceholderImages.push({
       ...project,

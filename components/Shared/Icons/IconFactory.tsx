@@ -9,9 +9,9 @@ import {
   FigmaLogo,
   GoLogo,
   TailwindCSSLogo,
-  NotigerLogo,
   TwNFTLogo,
   SecliLogo,
+  UoftMapLogo,
 } from ".";
 import StorliLogo from "./Storli";
 
@@ -38,8 +38,8 @@ const IconFactory = ({
       return <GoLogo {...otherProps} />;
     case "react":
       return <ReactLogo {...otherProps} />;
-    case "notiger":
-      return <NotigerLogo {...otherProps} />;
+    case "uoftmap":
+      return <UoftMapLogo {...otherProps} />;
     case "twnft":
       return <TwNFTLogo {...otherProps} />;
     case "storli":

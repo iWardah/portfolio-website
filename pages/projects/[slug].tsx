@@ -6,7 +6,6 @@ import { allProjects, Project } from "contentlayer/generated";
 import IconFactory from "@/components/Shared/Icons/IconFactory";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/Common/MDXComponents";
-import CustomGiscus from "@/components/Shared/CustomGiscus";
 import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import { GitHubLogo } from "@/components/Shared/Icons";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
@@ -26,11 +25,11 @@ const SkillPage: NextPage<ProjectPageProps> = ({
   return (
     <>
       <NextSeo
-        title={`${project.name} | Anish De`}
+        title={`${project.name} | Wardah`}
         description={project.description}
         openGraph={{
-          url: `https://anishde.dev/projects/${project.slug}`,
-          title: `${project.name} | Anish De`,
+          url: `https://wardah_ijaz.dev/projects/${project.slug}`,
+          title: `${project.name} | Wardah `,
           description: project.description,
           images: [
             {
@@ -81,9 +80,6 @@ const SkillPage: NextPage<ProjectPageProps> = ({
       <article>
         <div className="prose my-12 max-w-full leading-8">
           <ProjectMDX components={{ ...MDXComponents }} />
-        </div>
-        <div className="rounded-xl border-[1px] border-tertiary p-8">
-          <CustomGiscus term={`project: ${project.name}`} />
         </div>
       </article>
     </>

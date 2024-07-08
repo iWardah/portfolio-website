@@ -126,37 +126,10 @@ export const Project = defineDocumentType(() => ({
   },
 }));
 
-export const Achievement = defineDocumentType(() => ({
-  name: "Achievement",
-  filePathPattern: "achievements/**/*.mdx",
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      description: "The title of the achievement",
-      required: true,
-    },
-    date: {
-      type: "date",
-      description: "The date when the achievement was achieved",
-      required: false,
-    },
-    proof: {
-      type: "nested",
-      of: Proof,
-    },
-  },
-  computedFields: {
-    slug: {
-      type: "string",
-      resolve: doc => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
-    },
-  },
-}));
 
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Experience, Project, Achievement],
+  documentTypes: [Experience, Project],
   mdx: {
     rehypePlugins: [
       rehypeSlug,

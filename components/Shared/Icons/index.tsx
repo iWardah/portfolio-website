@@ -8,7 +8,7 @@ export { default as ReactLogo } from "./React";
 export { default as TailwindCSSLogo } from "./TailwindCSS";
 export { default as GoLogo } from "./Go";
 export { default as FigmaLogo } from "./Figma";
-export { default as NotigerLogo } from "./Notiger";
+export { default as UoftMapLogo } from "./UoftMap";
 export { default as YouTubeLogo } from "./YouTube";
 export { default as HashnodeLogo } from "./Hashnode";
 export { default as DevToLogo } from "./DevTo";

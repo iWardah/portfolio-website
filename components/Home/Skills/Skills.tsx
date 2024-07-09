@@ -80,9 +80,6 @@ const Skills = ({ small }: SkillsProps): JSX.Element => {
         </div>
       ))}
     </div>
-    {hoveredIcon && (
-        <p className="mt-4 text-center text-sm">Hovered Icon: {hoveredIcon}</p>
-      )}
     </div>
   );
 };

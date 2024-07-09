@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitSquare } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { TbBrandTypescript } from "react-icons/tb";
@@ -18,8 +18,7 @@ const CIcon = () => (
 
 
 const Skills = ({ small }: SkillsProps): JSX.Element => {
-  const [setHoveredIcon] = useState(null);
-
+  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   // Array of tech icons you want to display
   const techIcons = [
     { icon: <FaPython size={25}/>, name: "Python" },
@@ -81,6 +80,9 @@ const Skills = ({ small }: SkillsProps): JSX.Element => {
         </div>
       ))}
     </div>
+    {hoveredIcon && (
+        <p className="mt-4 text-center text-sm">Hovered Icon: {hoveredIcon}</p>
+      )}
     </div>
   );
 };

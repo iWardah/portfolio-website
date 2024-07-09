@@ -80,6 +80,7 @@ const Skills = ({ small }: SkillsProps): JSX.Element => {
         </div>
       ))}
     </div>
+    { hoveredIcon }
     </div>
   );
 };

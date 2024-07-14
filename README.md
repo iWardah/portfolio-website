@@ -1,14 +1,8 @@
-![Logo](https://res.cloudinary.com/letech-digital-solutions/image/upload/v1674554473/Group_131_mcmn2e.png)
+This is my portfolio website just meant to showcase my work. 
 
-# Portfolio Starter
+Currently deployed on Vercel
 
-#### A Portfolio Starter to create your own beautiful portfolio site powered by Spheron.
-
-This beautiful portfolio starter kit which contains all the required tools to make you look awesome is forked from [AnishDe12020/portfolio](https://github.com/AnishDe12020/portfolio) which is created by Anish De – [anishde.dev](https://anishde.dev). Bit shoutout to him!!!
-
-Just click on Use this template button, add the content, deploy on Spheron to make it immutable. And that's it!
-
-[Live Demo on Spheron](https://portfolio-starter-62dc1e.spheron.app)
+https://portfolio-website-sooty-beta.vercel.app/
 
 ## Getting started
 Here is a summary of the available scripts and a description.
